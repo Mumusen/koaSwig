@@ -3,8 +3,8 @@ node_js:
 - 8
 before_install:
 - openssl aes-256-cbc -K $encrypted_0749e6efd17f_key -iv $encrypted_0749e6efd17f_iv
-  -in mumu_rsa.enc -out ~\/.ssh/mumu_rsa -d
-- chmod 600 ~/.ssh/id_rsa
+  -in mumu_rsa.enc -out ~/.ssh/mumu_rsa -d
+- chmod 600 ~/.ssh/mumu_rsa
 - eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
+- ssh-add ~/.ssh/mumu_rsa
+# - cp .travis/ssh_config ~/.ssh/config
